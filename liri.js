@@ -19,6 +19,9 @@ var consumerSecret = keys.twitterKeys.consumer_secret;
 
 var commandArgs = process.argv;// this will take values from random.txt
 
+var commandArgs1 = process.argv[2];
+var commandArgs2 = process.argv[3];
+
 
 var request = require('request');
 var spotify = require('node-spotify-api');
@@ -39,29 +42,25 @@ var spotifyModule = new spotify({
 	secret: keys.spotifyKeys.clientSecret
 });
 
-// spotifyModule
-//   .search({ type: 'track', query: 'I Want it That Way' })
-//   .then(function(response) {
-//     // console.log(response);
-//     console.log(response.tracks);
 
+// //spotify
+function spotifySong(){
 
-//     console.log("Artists " + response.tracks.items[0].artists);
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
+	var songFromFile = commandArgs2;
+	console.log("-----------------------------------Spotify Information------------------------------");
 
-//spotify
-spotifyModule.search({ type: 'track', query: 'I Want it That Way' }, function(err, data) {
-	if (err) {
-		return console.log('Error occurred: ' + err);
-	}
+	if(commandArgs2 == undefined)
+		{	songFromFile =  "The Sign";
+	console.log("The Sign by Ace of Base");
+	spotifyModule.search({ type: 'track', query: songFromFile }, function(err, data) {
+		if (err) {
+			return console.log('Error occurred: ' + err);
+		}
 
 	// console.log(data.tracks);
 	
 	for (var i = 0; i < 20 ; i++) {
-		console.log("__________________________________________________Song#" +i+"_____________________________________________________________");
+		console.log("__________________________________________________Song#"+i+"_____________________________________________________________");
 		console.log("Artist's name: " + data.tracks.items[i].artists[0].name);
 		console.log("Song's Name : " + data.tracks.items[i].name);
 		console.log("Preview url: " + data.tracks.items[i].preview_url);
@@ -70,24 +69,39 @@ spotifyModule.search({ type: 'track', query: 'I Want it That Way' }, function(er
 
 });
 
+}
 
-// fs.readFile('random.txt', "utf8",function(error, data){
-// 	if(!error){
-// 		// console.log(data);
-// 		dataArr = data.split(",");
-// 		console.log(dataArr);
-// 	}
+else{
+
+	spotifyModule.search({ type: 'track', query: songFromFile }, function(err, data) {
+		if (err) {
+			return console.log('Error occurred: ' + err);
+		}
+
+	// console.log(data.tracks);
+	
+	for (var i = 0; i < 20 ; i++) {
+		console.log("__________________________________________________Song#"+i+"_____________________________________________________________");
+		console.log("Artist's name: " + data.tracks.items[i].artists[0].name);
+		console.log("Song's Name : " + data.tracks.items[i].name);
+		console.log("Preview url: " + data.tracks.items[i].preview_url);
+		console.log("Album Name " + data.tracks.items[i].album.name);
+	}
+
+});
+
+	
+}
 
 
-// })
+}
 
 
-
-
-//Twitter api
-var params = {screen_name: 'mnc8525'};
-client.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=20', params, function(error, tweets, response) {
-	if (!error) {
+// //Twitter api
+function twitterPosts(){
+	var params = {screen_name: 'mnc8525'};
+	client.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=20', params, function(error, tweets, response) {
+		if (!error) {
 	//console.log(tweets[element].text);	
  	//console.log(tweets);
 
@@ -99,8 +113,83 @@ client.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=20', p
  	}
  }
 });
+}
 
+function readFile(){
+	fs.readFile("random.txt", "utf8", function(error, data) {
 
+  // If the code experiences any errors it will log the error to the console.
+  if (error) {
+  	return console.log(error);
+  }
+
+  // Then split it by commas (to make it more readable)
+  var dataArr = data.split(",");
+
+  // We will then re-display the content as an array for later use.
+  console.log(dataArr[0]);
+  console.log(dataArr[1]);
+  commandArgs2 = dataArr[1];
+
+  if(dataArr[0] === 'spotify-this-song')
+  	spotifySong();
+
+  else if(dataArr[0] === 'movie-this')
+  	omdbMovie();
+
+});
+}
 
 //omdb
-request("http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&apikey=40e9cece", function(error, response, body) {
+function omdbMovie(){
+	var movie = commandArgs2;
+
+	if(movie == undefined){
+	request("http://www.omdbapi.com/?t=Mr.Nobody&y=&plot=short&apikey=40e9cece", function(error, response, body) {
+
+		if (!error && response.statusCode === 200) {
+
+			console.log("-----------------------------------Movie Information------------------------------");
+			console.log("Title: " + JSON.parse(body).Title);
+			console.log("Year: " + JSON.parse(body).Year);
+			console.log("imdbRating: "+JSON.parse(body).imdbRating);
+			console.log(JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value);
+			console.log("Country: " + JSON.parse(body).Country);
+			console.log("Language: " + JSON.parse(body).Language);		
+			console.log("Plot: " + JSON.parse(body).Plot);
+			console.log("Actors: " + JSON.parse(body).Actors);		
+		}
+	})
+	}
+
+	else{
+		request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=40e9cece", function(error, response, body) {
+
+		if (!error && response.statusCode === 200) {
+
+			console.log("-----------------------------------Movie Information------------------------------");
+			console.log("Title: " + JSON.parse(body).Title);
+			console.log("Year: " + JSON.parse(body).Year);
+			console.log("imdbRating: "+JSON.parse(body).imdbRating);
+			console.log(JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value);
+			console.log("Country: " + JSON.parse(body).Country);
+			console.log("Language: " + JSON.parse(body).Language);		
+			console.log("Plot: " + JSON.parse(body).Plot);
+			console.log("Actors: " + JSON.parse(body).Actors);		
+			}
+			})
+		}
+}
+
+
+if(commandArgs1 === 'do-what-it-says')
+	readFile();
+
+else if(commandArgs1 === 'spotify-this-song')
+	spotifySong();
+
+else if(commandArgs1 === 'movie-this')
+	omdbMovie();
+
+else if(commandArgs1 === 'my-tweets')
+	twitterPosts();
