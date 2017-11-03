@@ -1,0 +1,15 @@
+command: titanic-----------------------------------Movie Information------------------------------
+Title: Titanic
+Year: 1997imdbRating: 7.8
+Year: 1997
+Rotten Tomatoes:88%
+Country: USA
+Language: English, Swedish
+Plot: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.command: speed-----------------------------------Movie Information------------------------------
+Title: Speed
+Year: 1994imdbRating: 7.2
+Year: 1994
+Rotten Tomatoes:93%
+Country: USA
+Language: English
+Plot: A young police officer must prevent a bomb exploding aboard a city bus by keeping its speed above 50 mph.

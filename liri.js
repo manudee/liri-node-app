@@ -145,40 +145,57 @@ function omdbMovie(){
 	var movie = commandArgs2;
 
 	if(movie == undefined){
-	request("http://www.omdbapi.com/?t=Mr.Nobody&y=&plot=short&apikey=40e9cece", function(error, response, body) {
+		request("http://www.omdbapi.com/?t=Mr.Nobody&y=&plot=short&apikey=40e9cece", function(error, response, body) {
 
-		if (!error && response.statusCode === 200) {
+			if (!error && response.statusCode === 200) {
 
-			console.log("-----------------------------------Movie Information------------------------------");
-			console.log("Title: " + JSON.parse(body).Title);
-			console.log("Year: " + JSON.parse(body).Year);
-			console.log("imdbRating: "+JSON.parse(body).imdbRating);
-			console.log(JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value);
-			console.log("Country: " + JSON.parse(body).Country);
-			console.log("Language: " + JSON.parse(body).Language);		
-			console.log("Plot: " + JSON.parse(body).Plot);
-			console.log("Actors: " + JSON.parse(body).Actors);		
-		}
-	})
+				console.log("-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+					"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
+					+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
+					+ '\n' + "Country: " + JSON.parse(body).Country	
+					+ '\n' + "Language: " + JSON.parse(body).Language
+					+ '\n' + "Plot: " + JSON.parse(body).Plot);
+			}
+		})
 	}
 
 	else{
 		request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=40e9cece", function(error, response, body) {
 
+
+
+			var logTxt =
+			"command: " + movie + "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+			"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
+			+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
+			+ '\n' + "Country: " + JSON.parse(body).Country	
+			+ '\n' + "Language: " + JSON.parse(body).Language
+			+ '\n' + "Plot: " + JSON.parse(body).Plot;
+
+
+						// console.log("command: " + movie + "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+						// 	"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
+						// 	+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
+						// 	+ '\n' + "Country: " + JSON.parse(body).Country	
+						// 	+ '\n' + "Language: " + JSON.parse(body).Language
+						// 	+ '\n' + "Plot: " + JSON.parse(body).Plot);
+						// }
+					
+
 		if (!error && response.statusCode === 200) {
 
-			console.log("-----------------------------------Movie Information------------------------------");
-			console.log("Title: " + JSON.parse(body).Title);
-			console.log("Year: " + JSON.parse(body).Year);
-			console.log("imdbRating: "+JSON.parse(body).imdbRating);
-			console.log(JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value);
-			console.log("Country: " + JSON.parse(body).Country);
-			console.log("Language: " + JSON.parse(body).Language);		
-			console.log("Plot: " + JSON.parse(body).Plot);
-			console.log("Actors: " + JSON.parse(body).Actors);		
-			}
+			fs.appendFile('log.txt', logTxt, function(error){
+				if(error){
+					console.log("This errored");
+				}
+
+				else
+					console.log('Log File was updated');
 			})
 		}
+		})
+	}
+
 }
 
 
@@ -193,3 +210,4 @@ else if(commandArgs1 === 'movie-this')
 
 else if(commandArgs1 === 'my-tweets')
 	twitterPosts();
+
