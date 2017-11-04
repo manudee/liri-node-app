@@ -43,7 +43,7 @@ var spotifyModule = new spotify({
 });
 
 
-// //spotify
+//spotify
 function spotifySong(){
 
 	var songFromFile = commandArgs2;
@@ -57,7 +57,6 @@ function spotifySong(){
 			return console.log('Error occurred: ' + err);
 		}
 
-	// console.log(data.tracks);
 	
 	for (var i = 0; i < 20 ; i++) {
 		console.log("__________________________________________________Song#"+i+"_____________________________________________________________");
@@ -65,6 +64,25 @@ function spotifySong(){
 		console.log("Song's Name : " + data.tracks.items[i].name);
 		console.log("Preview url: " + data.tracks.items[i].preview_url);
 		console.log("Album Name " + data.tracks.items[i].album.name);
+
+
+		var logTxt = '\n' + "command:" + commandArgs1 + "" + commandArgs2 + '\n' + "__________________________________________________Song#"+i+"_____________________________________________________________"+
+		+ '\n' + "Artist's name: " + data.tracks.items[i].artists[0].name + 
+		+ '\n' + "Song's Name : " + data.tracks.items[i].name + 
+		+ '\n' + "Preview url: " + data.tracks.items[i].preview_url + 
+		+ '\n' + "Album Name " + data.tracks.items[i].album.name + '\n';
+
+
+		fs.appendFile('log.txt', logTxt, function(error){
+			if(error){
+				console.log("This errored for spotify");
+			}
+
+			else
+				console.log('Log File was updated for spotify');
+		})
+
+
 	}
 
 });
@@ -78,14 +96,32 @@ else{
 			return console.log('Error occurred: ' + err);
 		}
 
-	// console.log(data.tracks);
-	
 	for (var i = 0; i < 20 ; i++) {
-		console.log("__________________________________________________Song#"+i+"_____________________________________________________________");
+		console.log('\n' + "__________________________________________________Song#"+i+"_____________________________________________________________");
 		console.log("Artist's name: " + data.tracks.items[i].artists[0].name);
 		console.log("Song's Name : " + data.tracks.items[i].name);
 		console.log("Preview url: " + data.tracks.items[i].preview_url);
 		console.log("Album Name " + data.tracks.items[i].album.name);
+
+
+
+
+
+		var logTxt = '\n' + "command:" + commandArgs1 + "" + commandArgs2 + '\n' + "__________________________________________________Song#"+i+"_____________________________________________________________"+
+		+ '\n' + "Artist's name: " + data.tracks.items[i].artists[0].name + 
+		+ '\n' + "Song's Name : " + data.tracks.items[i].name + 
+		+ '\n' + "Preview url: " + data.tracks.items[i].preview_url + 
+		+ '\n' + "Album Name " + data.tracks.items[i].album.name ;
+
+
+		fs.appendFile('log.txt', logTxt, function(error){
+			if(error){
+				console.log("This errored for spotify");
+			}
+
+			else
+				console.log('Log File was updated for spotify');
+		})
 	}
 
 });
@@ -97,21 +133,37 @@ else{
 }
 
 
-// //Twitter api
+//Twitter api
 function twitterPosts(){
 	var params = {screen_name: 'mnc8525'};
 	client.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=20', params, function(error, tweets, response) {
 		if (!error) {
-	//console.log(tweets[element].text);	
- 	//console.log(tweets);
 
- 	var limit = tweets[0].user.statuses_count;
- 	//console.log(tweets[0].text);
- 	//console.log(tweets[0].created_at);
- 	for (var i = 0; i < limit ; i++) {
+
+			var limit = tweets[0].user.statuses_count;
+
+			for (var i = 0; i < limit ; i++) {
+ 	
  		console.log(tweets[i].text +'\n' + " Created at: "+tweets[i].created_at +'\n');
+ 		var logTxt = '\n' + "command:" + commandArgs1 + '\n' + tweets[i].text +'\n' + " Created at: "+tweets[i].created_at +'\n';
+
+ 		fs.appendFile('log.txt', logTxt, function(error){
+ 			if(error){
+ 				console.log("This errored for twitter");
+ 			}
+
+ 			else
+ 				console.log('Log File was updated for twitter');
+ 		})
  	}
+
+
+
+
  }
+
+
+
 });
 }
 
@@ -149,7 +201,7 @@ function omdbMovie(){
 
 			if (!error && response.statusCode === 200) {
 
-				console.log("-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+				console.log('\n'+"-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
 					"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
 					+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
 					+ '\n' + "Country: " + JSON.parse(body).Country	
@@ -165,7 +217,7 @@ function omdbMovie(){
 
 
 			var logTxt =
-			"command: " + movie + "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+			'\n' + "command: " + commandArgs1 + " " + movie + '\n'+ "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
 			"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
 			+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
 			+ '\n' + "Country: " + JSON.parse(body).Country	
@@ -173,27 +225,27 @@ function omdbMovie(){
 			+ '\n' + "Plot: " + JSON.parse(body).Plot;
 
 
-						// console.log("command: " + movie + "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
-						// 	"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
-						// 	+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
-						// 	+ '\n' + "Country: " + JSON.parse(body).Country	
-						// 	+ '\n' + "Language: " + JSON.parse(body).Language
-						// 	+ '\n' + "Plot: " + JSON.parse(body).Plot);
-						// }
+						console.log("command: " + commandArgs1 + "" + movie + "-----------------------------------Movie Information------------------------------" + '\n' + "Title: " + JSON.parse(body).Title + '\n' +  "Year: " + JSON.parse(body).Year + 
+							"imdbRating: "+ JSON.parse(body).imdbRating + '\n' + "Year: " + JSON.parse(body).Year
+							+ '\n' + JSON.parse(body).Ratings[1].Source+":"+JSON.parse(body).Ratings[1].Value
+							+ '\n' + "Country: " + JSON.parse(body).Country	
+							+ '\n' + "Language: " + JSON.parse(body).Language
+							+ '\n' + "Plot: " + JSON.parse(body).Plot);
 					
 
-		if (!error && response.statusCode === 200) {
 
-			fs.appendFile('log.txt', logTxt, function(error){
-				if(error){
-					console.log("This errored");
-				}
+						if (!error && response.statusCode === 200) {
 
-				else
-					console.log('Log File was updated');
-			})
-		}
-		})
+							fs.appendFile('log.txt', logTxt, function(error){
+								if(error){
+									console.log("This errored");
+								}
+
+								else
+									console.log('Log File was updated');
+							})
+						}
+					})
 	}
 
 }

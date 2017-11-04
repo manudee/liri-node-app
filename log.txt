@@ -1,15 +1,87 @@
-command: titanic-----------------------------------Movie Information------------------------------
+
+command: movie-this titanic
+-----------------------------------Movie Information------------------------------
 Title: Titanic
 Year: 1997imdbRating: 7.8
 Year: 1997
 Rotten Tomatoes:88%
 Country: USA
 Language: English, Swedish
-Plot: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.command: speed-----------------------------------Movie Information------------------------------
-Title: Speed
-Year: 1994imdbRating: 7.2
-Year: 1994
-Rotten Tomatoes:93%
-Country: USA
-Language: English
-Plot: A young police officer must prevent a bomb exploding aboard a city bus by keeping its speed above 50 mph.
+Plot: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.command:spotify-this-songI want it this way
+__________________________________________________Song#0_____________________________________________________________0Artist's name: OmenXIII0Song's Name : I Didn't Want to Do It This Way, But0Preview url: https://p.scdn.co/mp3-preview/438aa20d67e28f6f34ac6115778962aa60bc38e7?cid=b794406c22de43959e97ff27a4599f900Album Name Grimcommand:spotify-this-songI want it this way
+__________________________________________________Song#1_____________________________________________________________0Artist's name: Dillon Chevalier0Song's Name : Want It This Way0Preview url: https://p.scdn.co/mp3-preview/2b4e0365d0724a471cf11fdcbfaaaaed36a73c9d?cid=b794406c22de43959e97ff27a4599f900Album Name All I Needcommand:spotify-this-songI want it this way
+__________________________________________________Song#4_____________________________________________________________0Artist's name: Dragon Boy0Song's Name : All I Want is You Safe0Preview url: https://p.scdn.co/mp3-preview/c9ebb72b4e01383293c045bbcb5eed758a1eb302?cid=b794406c22de43959e97ff27a4599f900Album Name It Had to Be This Waycommand:spotify-this-songI want it this way
+__________________________________________________Song#2_____________________________________________________________0Artist's name: Cosmicity0Song's Name : I Must Want It This Way0Preview url: https://p.scdn.co/mp3-preview/82a21087c9e7294be262643cde435924f8f0ae6f?cid=b794406c22de43959e97ff27a4599f900Album Name Humans May Safely Grazecommand:spotify-this-songI want it this way
+__________________________________________________Song#3_____________________________________________________________0Artist's name: The Collins / Pickell Project0Song's Name : You Want It This Way0Preview url: https://p.scdn.co/mp3-preview/6e044a543ffd624ac649c2d5e4a0100745dd4bdb?cid=b794406c22de43959e97ff27a4599f900Album Name I Wanna Write A Song (For Celine Dion)command:spotify-this-songI want it this way
+__________________________________________________Song#6_____________________________________________________________0Artist's name: Little Brain Attack0Song's Name : I Want to Feel It This Way0Preview url: https://p.scdn.co/mp3-preview/1803ef8d9152c3df297c20788603724f16d92561?cid=b794406c22de43959e97ff27a4599f900Album Name The Suncommand:spotify-this-songI want it this way
+__________________________________________________Song#5_____________________________________________________________0Artist's name: Little Brain Attack0Song's Name : I Want to Feel It This Way0Preview url: https://p.scdn.co/mp3-preview/1803ef8d9152c3df297c20788603724f16d92561?cid=b794406c22de43959e97ff27a4599f900Album Name Oh La La!, Vol. 1 (A Musical French Kiss)command:spotify-this-songI want it this way
+__________________________________________________Song#8_____________________________________________________________0Artist's name: FalloftheRepublic0Song's Name : Falloftherepublic-I don't want this to be the deat - Landscape Recording Studio0Preview url: https://p.scdn.co/mp3-preview/f71812a2a9b0d5dcb0e9a121fd2004a60414b6da?cid=b794406c22de43959e97ff27a4599f900Album Name I don't want this to be the death of us but it's looking that waycommand:spotify-this-songI want it this way
+__________________________________________________Song#7_____________________________________________________________0Artist's name: Giant Crab0Song's Name : I Don't Want To Live This Way0Preview url: https://p.scdn.co/mp3-preview/7d6e6d3ca6213ec87e960be896a3f5994d7b7f51?cid=b794406c22de43959e97ff27a4599f900Album Name Cool It...Helioscommand:spotify-this-songI want it this way
+__________________________________________________Song#10_____________________________________________________________0Artist's name: Enos Hornet0Song's Name : I Don't Want Us to End It(This Way)0Preview url: https://p.scdn.co/mp3-preview/e70c8e19fce92f4d6eb4c66e4e8829683f3bd745?cid=b794406c22de43959e97ff27a4599f900Album Name 'Whatevercommand:spotify-this-songI want it this way
+__________________________________________________Song#11_____________________________________________________________0Artist's name: Chris Iverson0Song's Name : I Don't Want To Feel This Way No More (It's Over)0Preview url: https://p.scdn.co/mp3-preview/65b719e581abaa149d921207710c0257b2dcd813?cid=b794406c22de43959e97ff27a4599f900Album Name The Roar Of The Approaching Nightcommand:spotify-this-songI want it this way
+__________________________________________________Song#12_____________________________________________________________0Artist's name: Jonathan Young0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/f9b32073b319641e340d6c0aa8f0aaa42d98ab33?cid=b794406c22de43959e97ff27a4599f900Album Name I Didn't Write Any of This (Vol. 1)command:spotify-this-songI want it this way
+__________________________________________________Song#9_____________________________________________________________0Artist's name: Huntingtons0Song's Name : I Don't Want It To End This Way0Preview url: null0Album Name Get Lostcommand:my-tweets
+Your only limit is YOU
+ Created at: Sun Oct 29 22:43:44 +0000 2017
+command:my-tweets
+When you love what you have , you have everything you need!
+ Created at: Sun Oct 29 22:43:10 +0000 2017
+command:my-tweets
+waiting for my fav #WhichWich!
+ Created at: Sun Oct 29 22:36:28 +0000 2017
+command:my-tweets
+@coolabhi291 Yo!
+ Created at: Sun Oct 29 03:37:35 +0000 2017
+command:my-tweets
+rainy sunday afternoon with a hot cup of coffee! https://t.co/KhDrxXgieC
+ Created at: Sun Oct 29 20:33:36 +0000 2017
+command:my-tweets
+Nothing much, doing homework for command line node app.
+ Created at: Sun Oct 29 03:35:00 +0000 2017
+command:my-tweets
+don't miss out on 95% of your life just to weight 5% less!
+ Created at: Sun Oct 29 03:36:40 +0000 2017
+command:my-tweets
+Hello There, my first liri app
+ Created at: Sun Oct 29 03:34:30 +0000 2017
+
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#0_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=b794406c22de43959e97ff27a4599f900Album Name The Hits--Chapter One
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#2_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=b794406c22de43959e97ff27a4599f900Album Name Millennium
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#3_____________________________________________________________0Artist's name: Anthem Lights0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/4a163fbfa2dbbe4433f277e0e7395dca656364f5?cid=b794406c22de43959e97ff27a4599f900Album Name Covers Part IV
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#1_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/f9f504a705fcaaf2f24b004b629725451014ad6c?cid=b794406c22de43959e97ff27a4599f900Album Name The Essential Backstreet Boys
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#4_____________________________________________________________0Artist's name: Glee Cast0Song's Name : Bye Bye Bye / I Want It That Way (Glee Cast Version)0Preview url: https://p.scdn.co/mp3-preview/3aa63b5c98b98ae333e567813e5c720abb2914f0?cid=b794406c22de43959e97ff27a4599f900Album Name Bye Bye Bye / I Want It That Way (Glee Cast Version)
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#5_____________________________________________________________0Artist's name: Manuel Costa0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/cdde86f49ca4ef217ac08bbbb0c6295c16f015b0?cid=b794406c22de43959e97ff27a4599f900Album Name I Want It That Way
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#8_____________________________________________________________0Artist's name: "Weird Al" Yankovic0Song's Name : Ebay (Parody of "I Want It That Way" by the Backstreet Boys)0Preview url: https://p.scdn.co/mp3-preview/bc986c27b684adbc13837a5de25f14d4dbe0cc3c?cid=b794406c22de43959e97ff27a4599f900Album Name Poodle Hat
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#9_____________________________________________________________0Artist's name: Kyle Olthoff0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/101776fe4fc24aac543f6b4c5aa4273ac9d2dcc4?cid=b794406c22de43959e97ff27a4599f900Album Name I Want It That Way
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#6_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/2f96341eb8415a3efb27375db1c4d59928408c2f?cid=b794406c22de43959e97ff27a4599f900Album Name 90 Sweet 90s Hits!
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#10_____________________________________________________________0Artist's name: Landon Austin & Julia Sheer0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/e777be5446dc3df34abc2eaec241edb5a590976c?cid=b794406c22de43959e97ff27a4599f900Album Name I Want It That Way
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#7_____________________________________________________________0Artist's name: Dynamite Boy0Song's Name : I Want It That Way0Preview url: null0Album Name Punk Goes Pop
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#11_____________________________________________________________0Artist's name: Boyce Avenue0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/764f1dcb8c9a9cec099cc361cb388f931bf023d3?cid=b794406c22de43959e97ff27a4599f900Album Name New Acoustic Sessions, Vol. 3
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#12_____________________________________________________________0Artist's name: Steel Panther0Song's Name : I Want It That Way0Preview url: null0Album Name I Want It That Way
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#13_____________________________________________________________0Artist's name: "Weird Al" Yankovic0Song's Name : Ebay (Parody of "I Want It That Way" by the Backstreet Boys)0Preview url: https://p.scdn.co/mp3-preview/5632d8e302d70afaa8f79c962aa4b2032a45b3ef?cid=b794406c22de43959e97ff27a4599f900Album Name The Essential "Weird Al" Yankovic
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#14_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/c9302062adf4f59e60335f30c7ca46b487a267fb?cid=b794406c22de43959e97ff27a4599f900Album Name NOW That's What I Call 90s Pop
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#15_____________________________________________________________0Artist's name: Backstreet Boys0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=b794406c22de43959e97ff27a4599f900Album Name NKOTBSB
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#16_____________________________________________________________0Artist's name: Scott Bradlee's Postmodern Jukebox0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=b794406c22de43959e97ff27a4599f900Album Name Selfies on Kodachrome
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#17_____________________________________________________________0Artist's name: Jason Chen0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/cba62099b5bec2bc9244aaeaba0422556f6df04e?cid=b794406c22de43959e97ff27a4599f900Album Name I Want It That Way
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#18_____________________________________________________________0Artist's name: Scott Bradlee's Postmodern Jukebox0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=b794406c22de43959e97ff27a4599f900Album Name PMJ Is For Lovers: The Love Song Collection
+command:do-what-it-says"I Want it That Way"
+__________________________________________________Song#19_____________________________________________________________0Artist's name: FROIDZ0Song's Name : I Want It That Way0Preview url: https://p.scdn.co/mp3-preview/fdf46a47cbaf363ff9379b4222a74d1ba8291b67?cid=b794406c22de43959e97ff27a4599f900Album Name I Want It That Way
