@@ -8,6 +8,6 @@ APIs used are
   * omdb movie api
   * spotify
   
-The application also makes used of read file npm module to read file data dynamically and then display the requested information to the user based on the response received from various apis.
+The application also makes use of read file npm module to read file data dynamically and then display the requested information to the user based on the response received from various apis.
 
 # Functionality
